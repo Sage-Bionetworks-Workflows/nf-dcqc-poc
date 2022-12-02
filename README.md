@@ -4,7 +4,7 @@ This repository contains a proof of concept that demonstrates how a Nextflow wor
 
 ![DCQC](assets/dcqc.png)
 
-## Usage
+## Quick Usage
 
 You first need access to the Synapse files listed in `data/input_all.csv`. Then, you can run the following command after cloning the repository: 
 
@@ -12,7 +12,31 @@ You first need access to the Synapse files listed in `data/input_all.csv`. Then,
 nextflow run main.nf -profile test_all,docker
 ```
 
-## Example Output
+## Example Console Output
+
+```console
+$ nextflow run main.nf -profile test_all,docker
+
+N E X T F L O W  ~  version 22.11.1-edge
+Launching `main.nf` [suspicious_church] DSL2 - revision: 16c3716635
+executor >  local (50)
+[9c/83296d] process > PrepareQcTargets (1)   [100%] 1 of 1 ✔
+[4a/4a1615] process > StageQcTargets (1)     [100%] 6 of 6 ✔
+[7d/166e2c] process > PrepareQcTests (6)     [100%] 6 of 6 ✔
+[65/2171c3] process > RunInternalQcTest (12) [100%] 12 of 12 ✔
+[4c/c024aa] process > PreExternalQcTest (6)  [100%] 6 of 6 ✔
+[47/fb2c40] process > RunExternalQcTest (6)  [100%] 6 of 6 ✔
+[b2/eef65b] process > PostExternalQcTest (6) [100%] 6 of 6 ✔
+[c5/0180f4] process > TargetJsonReport (6)   [100%] 6 of 6 ✔
+[86/b26663] process > DatasetJsonReport      [100%] 1 of 1 ✔
+/Users/bgrande/Repos/dcqc-poc/work/86/b26663fabf0c9bb0dd95259c6a7105/dataset.qc_report.json
+Completed at: 01-Dec-2022 22:39:24
+Duration    : 1m 41s
+CPU hours   : 0.1
+Succeeded   : 50
+```
+
+## Example JSON Report
 
 ```json
 [
