@@ -38,6 +38,10 @@ Succeeded   : 50
 
 ## Example JSON Report
 
+<details>
+
+<summary>Click here to see example JSON report</summary>
+
 ```json
 [
   {
@@ -370,3 +374,9 @@ Succeeded   : 50
   }
 ]
 ```
+
+</details>
+
+## Workflow DAG
+
+![Workflow DAG](assets/dag.png)
