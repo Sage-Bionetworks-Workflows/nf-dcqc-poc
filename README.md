@@ -1,8 +1,8 @@
 # Data Coordination Quality Control - Proof of Concept
 
-This repository contains a proof of concept that demonstrates how a Nextflow workflow can be orchestrated by a Python script. In this case, the Python code determines which QC tests need to happen for each files and "queues" them up in Nextflow. Some of these tests are performed by the Python script (_i.e._ internal QC tests), whereas others require running a command in a separate container and interpreting the log files (_i.e._ external QC tests). In both cases, the Python script then collates the test results into JSON reports, both at the file level and the dataset level.
+<img src="assets/dcqc.png" width="50%" style="float:left; padding-right:2em;">
 
-![DCQC](assets/dcqc.png)
+This repository contains a proof of concept that demonstrates how a Nextflow workflow can be orchestrated by a Python script. In this case, the Python code determines which QC tests need to happen for each files and "queues" them up in Nextflow. Some of these tests are performed by the Python script (_i.e._ internal QC tests), whereas others require running a command in a separate container and interpreting the log files (_i.e._ external QC tests). In both cases, the Python script then collates the test results into JSON reports, both at the file level and the dataset level.
 
 ## Quick Usage
 
@@ -379,4 +379,7 @@ Succeeded   : 50
 
 ## Workflow DAG
 
-![Workflow DAG](assets/dag.png)
+<!-- ![Workflow DAG](assets/dag.png) -->
+
+<center><img src="assets/dag.png" width="50%"></center>
+
