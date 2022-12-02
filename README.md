@@ -1,4 +1,4 @@
-# Data Coordination Quality Control (DCQC) - Proof of Concept
+# Data Coordination Quality Control - Proof of Concept
 
 This repository contains a proof of concept that demonstrates how a Nextflow workflow can be orchestrated by a Python script. In this case, the Python code determines which QC tests need to happen for each files and "queues" them up in Nextflow. Some of these tests are performed by the Python script (_i.e._ internal QC tests), whereas others require running a command in a separate container and interpreting the log files (_i.e._ external QC tests). In both cases, the Python script then collates the test results into JSON reports, both at the file level and the dataset level.
 
