@@ -404,7 +404,7 @@ class OmeXmlSchemaQcTest(BaseExternalQcTest):
     def prepare_cmd(self):
         container = "openmicroscopy/bftools:latest"
         target_path = self.target.file.get_filename()
-        command = f'export PATH="/opt/bftools:$PATH"; f"xmlvalid "{target_path}"'
+        command = f'export PATH="/opt/bftools:$PATH"; xmlvalid "{target_path}"'
         return {"container": container, "command": command}
 
     def interpret_cmd(self):
@@ -488,7 +488,7 @@ class TiffQcSuite(FileQcSuite):
         self.tests.extend(new_tests)
 
 
-class OmeTiffQcSuite(FileQcSuite):
+class OmeTiffQcSuite(TiffQcSuite):
     file_type = "ome.tif"
     file_extensions = (".ome.tif", ".ome.tiff")
 
