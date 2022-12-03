@@ -6,13 +6,15 @@ This repository contains a proof of concept that demonstrates how a Nextflow wor
 
 ## Quick Usage
 
+### Test Command
+
 You first need access to the Synapse files listed in `data/input_all.csv`. Then, you can run the following command after cloning the repository: 
 
 ```console
 nextflow run main.nf -profile test_all,docker
 ```
 
-## Example Console Output
+### Test Console Output
 
 ```console
 $ nextflow run main.nf -profile test_all,docker
@@ -36,7 +38,7 @@ CPU hours   : 0.1
 Succeeded   : 50
 ```
 
-## Example JSON Report
+### Test JSON Report
 
 <details>
 
@@ -377,9 +379,22 @@ Succeeded   : 50
 
 </details>
 
-## Workflow DAG
+## Diagrams
+
+### Conceptual Workflow DAG
 
 <p align="center">
-  <img src="assets/dag.png" width="67%">
+  <img src="assets/nextflow-workflow.png" width="80%">
 </p>
 
+### Auto-Generated Workflow DAG
+
+<p align="center">
+  <img src="assets/dag.png" width="60%">
+</p>
+
+### Python Class Structure
+
+<p align="center">
+  <img src="assets/python-package.png" width="100%">
+</p>
